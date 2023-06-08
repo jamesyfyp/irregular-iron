@@ -1,41 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import Counter from "../components/react/test.jsx";
+import LandingPage from "../components/react/LandingPage.jsx";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
-    <div class="w-full h-30 bg-blue-600 scroll">
-      <Counter client:load />
-    </div>
-    <!-- <div class="-rotate-90 w-auto h-auto m-auto justify-center">
-      <h1 id="scroll" class="">
-        <span
-          class="text-[50px] m-auto bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 text-transparent bg-clip-text"
-          >Welcome</span
-        >
-      </h1>
-      <h1 id="scroll" class="">
-        <span
-          class="text-[50px] m-auto bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 text-transparent bg-clip-text"
-          >To The Blog</span
-        >
-      </h1>
-      <h1 id="scroll" class="">
-        <span
-          class="text-[50px] m-auto bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 text-transparent bg-clip-text"
-          >I'm Making For</span
-        >
-      </h1>
-      <h1 class="">
-        <span
-          class="text-[50px] m-auto bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 text-transparent bg-clip-text"
-          >FUN :D
-        </span>
-      </h1>
-    </div> -->
-    <div class="parallax-bg"></div>
-    <div class="parallax-content"></div>
+    <LandingPage client:load />
   </main>
 </Layout>
+
+<style>
+  main {
+    height: 100vh;
+    width: 100vw;
+  }
+</style>
