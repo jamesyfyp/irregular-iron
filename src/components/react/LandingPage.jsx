@@ -4,10 +4,10 @@ import { motion } from "framer-motion"
 
 export default function LandingPage() {
   let className = [
-    "absolute -top-10 p-2  text-5xl bg-gradient-to-r text-transparent bg-clip-text font-black ",
+    "absolute -top-20 p-2  text-5xl bg-gradient-to-r text-transparent bg-clip-text font-black ",
+    "absolute -top-10 p-2  text-5xl m-auto bg-gradient-to-r text-transparent bg-clip-text font-black",
     "absolute top-0 p-2  text-5xl m-auto bg-gradient-to-r text-transparent bg-clip-text font-black",
-    "absolute top-10 p-2  text-5xl m-auto bg-gradient-to-r text-transparent bg-clip-text font-black",
-    "absolute top-20 p-2  text-5xl m-auto bg-gradient-to-r text-transparent bg-clip-text font-black"
+    "absolute top-10 p-2  text-5xl m-auto bg-gradient-to-r text-transparent bg-clip-text font-black"
   ]
 
   let messageOneColors = [
@@ -98,7 +98,6 @@ export default function LandingPage() {
         className="h-5 w-5 mt-[500px] bg-white m-auto align-middle"
         whileInView={{ opacity: Math.abs(scrollVal) / 600 - .4 }}
       >
-
       </motion.div>
     </div>
 
