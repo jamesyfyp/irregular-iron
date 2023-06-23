@@ -1,0 +1,1 @@
+{"stack.dev-irregular-iron-Site.json":[{"id":"site","addr":"c8d15bfcc3d20b49d064ab345ab5d55bd65c37067e","stack":"dev-irregular-iron-Site","type":"AstroSite","data":{"mode":"placeholder","path":".","server":"arn:aws:lambda:us-east-1:971948417832:function:dev-irregular-iron-Site-siteServerFunction6DFA6F1B-nA7CL7algecn","secrets":[]}}]}

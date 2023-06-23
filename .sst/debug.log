@@ -1,0 +1,26 @@
+2023-06-22T15:43:50.041Z  +2210ms [debug] Config loaded {"version":"2.16.3","cdkVersion":"2.84.0","constructsVersion":"10.1.156","config":{"name":"irregular-iron","region":"us-east-1","stage":"dev","ssmPrefix":"/sst/irregular-iron/dev/"},"metafile":{"inputs":{"sst.config.ts":{"bytes":222,"imports":[{"path":"sst/constructs","kind":"import-statement","external":true}]}},"outputs":{".sst.config.1687448628214.mjs":{"imports":[{"path":"sst/constructs","kind":"import-statement","external":true}],"exports":["default"],"entryPoint":"sst.config.ts","inputs":{"sst.config.ts":{"bytesInOutput":154}},"bytes":336}}},"paths":{"config":"/root/Documents/Programming/AstroSST/irregular-iron/sst.config.ts","root":"/root/Documents/Programming/AstroSST/irregular-iron","out":"/root/Documents/Programming/AstroSST/irregular-iron/.sst","artifacts":"/root/Documents/Programming/AstroSST/irregular-iron/.sst/artifacts"}}
+2023-06-22T15:43:50.133Z    +92ms [debug] Using AWS profile 
+2023-06-22T15:43:50.157Z    +24ms [debug] Created AWS client IoTClient
+2023-06-22T15:43:50.157Z     +0ms [debug] Getting IoT endpoint
+2023-06-22T15:43:51.072Z   +915ms [debug] Using IoT endpoint: a2xmunc1aowpc5-ats.iot.us-east-1.amazonaws.com
+2023-06-22T15:43:51.072Z     +0ms [debug] Initializing bootstrap context
+2023-06-22T15:43:51.073Z     +1ms [debug] Created AWS client CloudFormationClient
+2023-06-22T15:43:51.521Z   +448ms [debug] Loaded bootstrap status
+2023-06-22T15:43:51.521Z     +0ms [debug] Bootstrap context initialized {"version":"7","bucket":"sstbootstrap-useast124d14e4b-1b4qtza8hls8p"}
+2023-06-22T15:43:51.522Z     +1ms [debug] Created AWS client S3Client
+2023-06-22T15:43:51.568Z    +46ms [debug] Fetching all metadata
+2023-06-22T15:43:51.950Z   +382ms [debug] IoT connected
+2023-06-22T15:43:52.123Z   +173ms [debug] Fetched metadata from 1 stacks
+2023-06-22T15:43:52.125Z     +2ms [debug] Created AWS client LambdaClient
+2023-06-22T15:43:52.593Z   +468ms [debug] Created AWS client STSClient
+2023-06-22T17:49:01.617Z +7509024ms [debug] IoT error {"errno":-104,"code":"ECONNRESET","syscall":"read","type":"error","target":{"_events":{},"_eventsCount":0,"readyState":3,"bytesReceived":45,"extensions":null,"protocol":"mqttv3.1","_binaryType":"arraybuffer","_closeFrameReceived":false,"_closeFrameSent":false,"_closeMessage":"","_closeTimer":null,"_finalized":true,"_closeCode":1006,"_receiver":null,"_sender":null,"_socket":null,"_ultron":null,"protocolVersion":13,"_isServer":false,"url":"wss://a2xmunc1aowpc5-ats.iot.us-east-1.amazonaws.com/mqtt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6ETFD4MUIWWYE2VT%2F20230622%2Fus-east-1%2Fiotdevicegateway%2Faws4_request&X-Amz-Date=20230622T154351Z&X-Amz-SignedHeaders=host&X-Amz-Signature=8ba2fad2ebbe6e2000c243420cf87d582d798f3b411f89414be05f7126d22f0d","_req":null}}
+2023-06-22T17:49:01.618Z     +1ms [debug] IoT closed
+2023-06-22T17:49:02.619Z  +1001ms [debug] IoT reconnected
+2023-06-22T17:49:03.320Z   +701ms [debug] IoT connected
+2023-06-22T18:21:59.439Z +1976119ms [debug] IoT closed
+2023-06-22T18:22:00.440Z  +1001ms [debug] IoT reconnected
+2023-06-22T18:22:00.882Z   +442ms [debug] IoT connected
+2023-06-23T03:31:29.524Z +32968642ms [debug] IoT error {"errno":-104,"code":"ECONNRESET","syscall":"read","type":"error","target":{"_events":{},"_eventsCount":0,"readyState":3,"bytesReceived":29,"extensions":null,"protocol":"mqttv3.1","_binaryType":"arraybuffer","_closeFrameReceived":false,"_closeFrameSent":false,"_closeMessage":"","_closeTimer":null,"_finalized":true,"_closeCode":1006,"_receiver":null,"_sender":null,"_socket":null,"_ultron":null,"protocolVersion":13,"_isServer":false,"url":"wss://a2xmunc1aowpc5-ats.iot.us-east-1.amazonaws.com/mqtt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6ETFD4MUIWWYE2VT%2F20230622%2Fus-east-1%2Fiotdevicegateway%2Faws4_request&X-Amz-Date=20230622T182200Z&X-Amz-SignedHeaders=host&X-Amz-Signature=15b5edb4a096d719d4bdbf825e3939d588ff1f054e2582af7dce1c52583dccdb","_req":null}}
+2023-06-23T03:31:29.524Z     +0ms [debug] IoT closed
+2023-06-23T03:31:30.525Z  +1001ms [debug] IoT reconnected
+2023-06-23T03:31:31.101Z   +576ms [debug] IoT connected
