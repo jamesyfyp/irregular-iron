@@ -1,10 +1,13 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion } from "framer-motion"
+import Button from '../components/Button';
 // import * as ti from "taichi.js"
 
 
 export default function LandingPage() {
+
+
   let className = [
     "absolute left-1/2 transform -translate-x-1/2 bottom-20 p-2  text-5xl bg-gradient-to-r text-transparent bg-clip-text font-black",
     "absolute left-1/2 transform -translate-x-1/2 bottom-10 p-2  text-5xl m-auto bg-gradient-to-r text-transparent bg-clip-text font-black",
@@ -48,6 +51,16 @@ export default function LandingPage() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [scrollVal])
+
+  const buttonClassName = "p-2 m-auto w-full  text-blue-300 font-black text-sm sm:text-md md:text-lg lg:w-1/2 border-2 rounded-xl shadow-md hover:shadow-sm hover:outline hover:outline-2 hover:outline-inset-2 hover:underline decoration-2  underline-offset-[6px] hover:cursor-pointer"
+
+  const buttonValues = [{
+    name: "Linked In", onClick: () => {
+      window.open('https://www.linkedin.com/in/james-phillips-923878223/', '_blank').focus();
+    }, className: buttonClassName
+  },
+  { name: "Blog", onClick: () => { window.location.href = '/blog' }, className: buttonClassName },
+  { name: "Portfolio", onClick: () => { window.location.href = '/portfolio' }, className: buttonClassName }]
 
   return (
     <div className='relative w-full h-full overflow-hidden'>
@@ -99,10 +112,12 @@ export default function LandingPage() {
           >
             <div className='relative h-[100vh] w-auto p-8 '>
               <div className='rounded-full h-[300px] w-[300px] bg-blue-500 absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2'></div>
-              <div className='pt-[50vh] grid grid-cols-3 w-1/3 text-center m-auto'>
-                <div>Linked In</div>
-                <div>Blog</div>
-                <div>Discord</div>
+              <div className='pt-[50vh] gap-4 grid grid-row-3  w-1/2 sm:w-1/3 text-center m-auto'>
+                {buttonValues.map((button, i) => {
+                  return (
+                    <Button name={button.name} className={button.className} onClick={button.onClick} key={i} />
+                  )
+                })}
               </div>
             </div>
           </motion.div>
