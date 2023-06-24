@@ -1,15 +1,15 @@
-2023-06-24T06:55:44.394Z  +2431ms [debug] Config loaded {"version":"2.16.3","cdkVersion":"2.84.0","constructsVersion":"10.1.156","config":{"name":"irregular-iron","region":"us-east-1","stage":"dev","ssmPrefix":"/sst/irregular-iron/dev/"},"metafile":{"inputs":{"sst.config.ts":{"bytes":227,"imports":[{"path":"sst/constructs","kind":"import-statement","external":true}]}},"outputs":{".sst.config.1687589742397.mjs":{"imports":[{"path":"sst/constructs","kind":"import-statement","external":true}],"exports":["default"],"entryPoint":"sst.config.ts","inputs":{"sst.config.ts":{"bytesInOutput":154}},"bytes":336}}},"paths":{"config":"/root/Documents/Programming/AstroSST/irregular-iron/sst.config.ts","root":"/root/Documents/Programming/AstroSST/irregular-iron","out":"/root/Documents/Programming/AstroSST/irregular-iron/.sst","artifacts":"/root/Documents/Programming/AstroSST/irregular-iron/.sst/artifacts"}}
-2023-06-24T06:55:44.496Z   +102ms [debug] Using AWS profile 
-2023-06-24T06:55:44.528Z    +32ms [debug] Created AWS client IoTClient
-2023-06-24T06:55:44.528Z     +0ms [debug] Getting IoT endpoint
-2023-06-24T06:55:45.266Z   +738ms [debug] Using IoT endpoint: a2xmunc1aowpc5-ats.iot.us-east-1.amazonaws.com
-2023-06-24T06:55:45.266Z     +0ms [debug] Initializing bootstrap context
-2023-06-24T06:55:45.267Z     +1ms [debug] Created AWS client CloudFormationClient
-2023-06-24T06:55:45.712Z   +445ms [debug] Loaded bootstrap status
-2023-06-24T06:55:45.712Z     +0ms [debug] Bootstrap context initialized {"version":"7","bucket":"sstbootstrap-useast124d14e4b-1b4qtza8hls8p"}
-2023-06-24T06:55:45.713Z     +1ms [debug] Created AWS client S3Client
-2023-06-24T06:55:45.765Z    +52ms [debug] Fetching all metadata
-2023-06-24T06:55:46.383Z   +618ms [debug] Fetched metadata from 1 stacks
-2023-06-24T06:55:46.384Z     +1ms [debug] Created AWS client LambdaClient
-2023-06-24T06:55:46.420Z    +36ms [debug] IoT connected
-2023-06-24T06:55:46.814Z   +394ms [debug] Created AWS client STSClient
+2023-06-24T07:56:53.305Z  +2682ms [debug] Config loaded {"version":"2.16.3","cdkVersion":"2.84.0","constructsVersion":"10.1.156","config":{"name":"irregular-iron","region":"us-east-1","stage":"dev","ssmPrefix":"/sst/irregular-iron/dev/"},"metafile":{"inputs":{"sst.config.ts":{"bytes":227,"imports":[{"path":"sst/constructs","kind":"import-statement","external":true}]}},"outputs":{".sst.config.1687593411112.mjs":{"imports":[{"path":"sst/constructs","kind":"import-statement","external":true}],"exports":["default"],"entryPoint":"sst.config.ts","inputs":{"sst.config.ts":{"bytesInOutput":154}},"bytes":336}}},"paths":{"config":"/root/Documents/Programming/AstroSST/irregular-iron/sst.config.ts","root":"/root/Documents/Programming/AstroSST/irregular-iron","out":"/root/Documents/Programming/AstroSST/irregular-iron/.sst","artifacts":"/root/Documents/Programming/AstroSST/irregular-iron/.sst/artifacts"}}
+2023-06-24T07:56:53.427Z   +122ms [debug] Using AWS profile 
+2023-06-24T07:56:53.470Z    +43ms [debug] Created AWS client IoTClient
+2023-06-24T07:56:53.470Z     +0ms [debug] Getting IoT endpoint
+2023-06-24T07:56:54.106Z   +636ms [debug] Using IoT endpoint: a2xmunc1aowpc5-ats.iot.us-east-1.amazonaws.com
+2023-06-24T07:56:54.106Z     +0ms [debug] Initializing bootstrap context
+2023-06-24T07:56:54.107Z     +1ms [debug] Created AWS client CloudFormationClient
+2023-06-24T07:56:54.534Z   +427ms [debug] Loaded bootstrap status
+2023-06-24T07:56:54.534Z     +0ms [debug] Bootstrap context initialized {"version":"7","bucket":"sstbootstrap-useast124d14e4b-1b4qtza8hls8p"}
+2023-06-24T07:56:54.535Z     +1ms [debug] Created AWS client S3Client
+2023-06-24T07:56:54.591Z    +56ms [debug] Fetching all metadata
+2023-06-24T07:56:55.130Z   +539ms [debug] Fetched metadata from 1 stacks
+2023-06-24T07:56:55.132Z     +2ms [debug] Created AWS client LambdaClient
+2023-06-24T07:56:55.307Z   +175ms [debug] IoT connected
+2023-06-24T07:56:55.779Z   +472ms [debug] Created AWS client STSClient
