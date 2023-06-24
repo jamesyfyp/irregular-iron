@@ -1,0 +1,12 @@
+{
+    "title": "Welcome",
+    "tags": ["hello", "world"], 
+    "body": {
+        "test": "test",
+        "test2": "test2"
+    },
+    "thumbImage": {
+      "image": "https://docs.astro.build/assets/logomark-light.png",
+      "alt": "astro js rocket logo"
+    }
+}
