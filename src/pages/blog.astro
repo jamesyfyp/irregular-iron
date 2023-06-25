@@ -30,13 +30,11 @@ const allBlogPosts = await getCollection("blog");
               </div>
             </div>
             <div class="flex p-2 my-2 gap-[10px]">
-              {tags.map((tag: any) => {
-                return (
-                  <div class="flex bg-red-500 text-sm text-center align-middle  py-1 px-2 rounded-full ">
-                    <h1>{tag}</h1>
-                  </div>
-                );
-              })}
+              {tags.map((tag: any) => (
+                <div class="flex bg-red-500 text-sm text-center align-middle  py-1 px-2 rounded-full ">
+                  <h1>{tag}</h1>
+                </div>
+              ))}
             </div>
           </div>
         );
