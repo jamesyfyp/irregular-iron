@@ -1,0 +1,12 @@
+{
+    "title": "Welcome",
+    "tags": ["hello", "world"], 
+    "body": {
+        "test": "test",
+        "test2": "test2"
+    },
+    "thumbImage": {
+      "image": "https://m.media-amazon.com/images/I/61rjVsHWgUL._AC_SX569_.jpg",
+      "alt": "mcluvin"
+    }
+}
