@@ -1,5 +1,8 @@
 import type { SSTConfig } from "sst";
-import { AstroSite, Api } from "sst/constructs";
+import { StorageStack } from "./stacks/StorageStack";
+import { AstroSite } from "sst/constructs";
+import { ApiStack } from "./stacks/ApiStack";
+
 
 
 export default {
@@ -10,15 +13,8 @@ export default {
     };
   },
   stacks(app) {
-    app.stack(function Site({ stack }) {
-      const api = new Api(stack, "api", {
-        routes: {
-          "GET /": "packages/functions/src/time.handler",
-        },
-      });
-      const site = new AstroSite(stack, "site", {
-        bind: [api]
-      });
+    app.stack(StorageStack).stack(ApiStack).stack(function Site({ stack }) {
+      const site = new AstroSite(stack, "site", );
       stack.addOutputs({
         url: site.url,
       });
