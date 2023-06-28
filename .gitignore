@@ -20,3 +20,6 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 .sst/debug.log
+
+#sst files are alot
+sst/

@@ -4,6 +4,23 @@ import Card from "../components/Card.astro";
 import { getCollection } from "astro:content";
 
 const allBlogPosts = await getCollection("blog");
+const stuff = await fetch(
+  "https://di10dsxzc6.execute-api.us-east-1.amazonaws.com/posts/75c9d260-1489-11ee-9979-8d6cdfd37565/test1"
+)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Request failed");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    // Handle the response data
+    console.log(data);
+  })
+  .catch((error) => {
+    // Handle any errors
+    console.error(error);
+  });
 ---
 
 <script src="https://unpkg.com/taichi.js/dist/taichi.umd.js"></script>

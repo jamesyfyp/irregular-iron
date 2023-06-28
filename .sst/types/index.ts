@@ -7,7 +7,7 @@ declare module "sst/node/config" {
 }import "sst/node/table";
 declare module "sst/node/table" {
   export interface TableResources {
-    "Posts": {
+    "BlogPost": {
       tableName: string;
     }
   }
