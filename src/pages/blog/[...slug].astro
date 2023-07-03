@@ -1,0 +1,32 @@
+---
+import SideNav from "../../layouts/SideNav.astro";
+const getBlogPosts = async (title: string | undefined) => {
+  const BlogPosts = await fetch(
+    `https://di10dsxzc6.execute-api.us-east-1.amazonaws.com/blogPost/${title}`
+  )
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Request failed");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((error) => {
+      return error;
+    });
+};
+const { slug } = Astro.params;
+const req = await fetch(
+  `https://di10dsxzc6.execute-api.us-east-1.amazonaws.com/blogPost/${slug}`
+);
+const post = await req.json();
+console.log(post);
+
+let setUpSlug = !slug ? "index" : slug;
+---
+
+<SideNav>
+  <h1>{post.postTitle}</h1>
+</SideNav>

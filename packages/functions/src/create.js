@@ -6,11 +6,11 @@ import dynamoDb from "../../core/src/dynamodb";
 export const main = handler(async (event) => {
   const data = JSON.parse(event.body);
   const params = {
-    TableName: Table.Posts.tableName,
+    TableName: Table.BlogPost.tableName,
     Item: {
       // The attributes of the item to be created
       postTitle: data.title, // The id of the author
-      postId: uuid.v1(), // A unique uuid
+      userId: 'james', // A unique uuid
       content: data.content, // Parsed from request body
       createdAt: Date.now(), // Current Unix timestamp
     },

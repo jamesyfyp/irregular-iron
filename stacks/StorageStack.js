@@ -2,12 +2,12 @@ import { Table } from "sst/constructs";
 
 export function StorageStack({ stack, app }) {
   // Create the DynamoDB table
-  const table = new Table(stack, "Posts", {
+  const table = new Table(stack, "BlogPost", {
     fields: {
-      postId: "string",
+      userId: "string",
       postTitle: "string",
     },
-    primaryIndex: { partitionKey: "postId", sortKey: "postTitle" },
+    primaryIndex: { partitionKey: "userId", sortKey: "postTitle" },
   });
 
   return {
