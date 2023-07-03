@@ -1,0 +1,16 @@
+---
+import SideNav from "../../../layouts/SideNav.astro";
+
+const { slug } = Astro.params;
+const req = await fetch(
+  `https://di10dsxzc6.execute-api.us-east-1.amazonaws.com/blogPost/${slug}`
+);
+const post = await req.json();
+console.log(post);
+
+let setUpSlug = !slug ? "index" : slug;
+---
+
+<SideNav>
+  <h1>{post.postTitle}</h1>
+</SideNav>

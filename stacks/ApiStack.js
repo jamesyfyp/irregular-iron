@@ -15,7 +15,8 @@ export function ApiStack({ stack, app }) {
       "POST /blogPosts": "packages/functions/src/create.main",
       "GET /blogPosts": "packages/functions/src/list.main",
       "GET /blogPost/{title}": "packages/functions/src/get.main",
-      
+      "PUT /blogPost/{title}": "packages/functions/src/update.main",
+      "DELETE /blogPost/{id}": "packages/functions/src/delete.main"
     },
   });
 

@@ -1,0 +1,14 @@
+---
+import Layout from "./Layout.astro";
+import SideNavState from "../components/react/components/sideNavState.jsx";
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+  <div class="flex">
+    <SideNavState client:load />
+    <div class="w-full">
+      <slot />
+    </div>
+  </div>
+</Layout>

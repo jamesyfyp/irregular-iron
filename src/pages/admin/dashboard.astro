@@ -1,0 +1,39 @@
+---
+import SideNav from "../../layouts/SideNav.astro";
+import Post from "../../components/post.astro";
+
+const allBlogPosts = await fetch(
+  "https://di10dsxzc6.execute-api.us-east-1.amazonaws.com/blogPosts"
+)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Request failed");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    return data;
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+---
+
+<script src="https://unpkg.com/taichi.js/dist/taichi.umd.js"></script>
+<main>
+  <SideNav title="Admin">
+    {
+      allBlogPosts.map((post: any) => {
+        const title = post?.postTitle;
+        const content = post?.content;
+        return (
+          <Post
+            title={title}
+            content={content}
+            link={`http://localhost:3000/admin/dashboard/editPost/${title}`}
+          />
+        );
+      })
+    }
+  </SideNav>
+</main>
