@@ -7,7 +7,7 @@ export const main = handler(async (event) => {
   const params = {
     TableName: Table.BlogPost.tableName,
     Key: {
-      userId: "james", 
+      userId: event.requestContext.authorizer.iam.cognitoIdentity.identityId, 
       postTitle: event.pathParameters.title, 
     },
     

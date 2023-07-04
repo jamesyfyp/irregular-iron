@@ -11,6 +11,13 @@ declare module "sst/node/table" {
       tableName: string;
     }
   }
+}import "sst/node/bucket";
+declare module "sst/node/bucket" {
+  export interface BucketResources {
+    "Uploads": {
+      bucketName: string;
+    }
+  }
 }import "sst/node/api";
 declare module "sst/node/api" {
   export interface ApiResources {
