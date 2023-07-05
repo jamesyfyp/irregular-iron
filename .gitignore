@@ -22,4 +22,4 @@ pnpm-debug.log*
 .sst/debug.log
 
 #sst files are alot
-sst/
+.sst/

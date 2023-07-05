@@ -13,9 +13,15 @@ export function ApiStack({ stack, app }) {
       },
     },
     routes: {
-      "POST /blogPosts": "packages/functions/src/create.main",
-      "GET /blogPosts": "packages/functions/src/list.main",
-      "GET /blogPost/{title}": "packages/functions/src/get.main",
+      "POST /blogPost": "packages/functions/src/create.main",
+      "GET /blogPosts": {
+        function:"packages/functions/src/list.main",
+        authorizer: "none"
+      },
+      "GET /blogPost/{title}": {
+        function:"packages/functions/src/get.main",
+        authorizer:"none"
+      },
       "PUT /blogPost/{title}": "packages/functions/src/update.main",
       "DELETE /blogPost/{id}": "packages/functions/src/delete.main"
     },

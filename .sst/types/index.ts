@@ -28,7 +28,7 @@ declare module "sst/node/api" {
 }import "sst/node/site";
 declare module "sst/node/site" {
   export interface AstroSiteResources {
-    "site": {
+    "Site": {
       url: string;
     }
   }
