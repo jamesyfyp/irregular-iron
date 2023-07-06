@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from 'react';
-import { motion } from "framer-motion"
+import { mirrorEasing, motion } from "framer-motion"
 import Button from '../components/Button';
 // import * as ti from "taichi.js"
 
@@ -27,6 +27,7 @@ export default function LandingPage() {
 
   const scrolUp = () => { setScrollVal(scrollVal + 10) }
   const scrolDown = () => { setScrollVal(scrollVal - 10) }
+  console.log(scrollVal)
 
   function handleScroll(event) {
     if (Math.abs(scrollVal) < 10) setTextColors(className.map(x => { return x + messageOneColors[0] }))
@@ -52,7 +53,8 @@ export default function LandingPage() {
     };
   }, [scrollVal])
 
-  const buttonClassName = "p-2 m-auto w-full bg-violet-900/50 text-white  text-sm sm:text-md md:text-lg lg:w-1/2 border-2 rounded-xl shadow-md hover:shadow-sm hover:outline hover:outline-2 hover:outline-inset-2 hover:underline decoration-2  underline-offset-[6px] hover:cursor-pointer"
+  let buttonClassName = "p-2 m-auto w-full bg-violet-900/50 text-white  text-sm sm:text-md md:text-lg lg:w-1/2 border-2 rounded-xl shadow-md hover:shadow-sm hover:outline hover:outline-2 hover:outline-inset-2 hover:underline decoration-2  underline-offset-[6px] "
+  scrollVal < 20 ? buttonClassName += "cursor-auto" : buttonClassName += "hover:cursor-pointer"
 
   const buttonValues = [{
     name: "Linked In", onClick: () => {
@@ -110,16 +112,16 @@ export default function LandingPage() {
               scale: 1
             }}
           >
-            <div className='relative h-[100vh] w-auto p-8 '>
-              <div className='rounded-full h-[300px] w-[300px] bg-violet-900/50 absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2'></div>
-              <div className='pt-[50vh] gap-4 grid grid-row-3  w-1/2 sm:w-1/3 text-center m-auto'>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: scrollVal / 25 }} className='relative h-[100vh] w-auto p-8 '>
+              <motion.div className='rounded-full h-[300px] w-[300px] bg-violet-900/50 absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2'></motion.div>
+              <motion.div className='pt-[50vh] gap-4 grid grid-row-3  w-1/2 sm:w-1/3 text-center m-auto'>
                 {buttonValues.map((button, i) => {
                   return (
                     <Button name={button.name} className={button.className} onClick={button.onClick} key={i} />
                   )
                 })}
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </motion.div>
         </motion.div>
       </motion.div>

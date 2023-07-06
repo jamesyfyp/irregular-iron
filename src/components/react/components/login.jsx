@@ -5,7 +5,6 @@ export default function Login() {
     const [passWord, setPassword] = useState('')
     async function handleSubmit(e) {
         e.preventDefault();
-
     }
     return (
         <form onSubmit={handleSubmit} className="w-[300px] m-auto pt-10">

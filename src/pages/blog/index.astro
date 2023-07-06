@@ -3,6 +3,8 @@ import Card from "../../components/Card.astro";
 import { getCollection } from "astro:content";
 import SideNav from "../../layouts/SideNav.astro";
 
+console.log(Astro.url);
+
 const allBlogPosts = await fetch(
   "https://di10dsxzc6.execute-api.us-east-1.amazonaws.com/blogPosts"
 )
