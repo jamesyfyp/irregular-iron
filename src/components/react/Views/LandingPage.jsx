@@ -25,9 +25,8 @@ export default function LandingPage() {
   const [scrollVal, setScrollVal] = useState(0)
   const [textColors, setTextColors] = useState(className.map(x => { return x + messageOneColors[0] }))
 
-  const scrolUp = () => { setScrollVal(scrollVal + 10) }
-  const scrolDown = () => { setScrollVal(scrollVal - 10) }
-  console.log(scrollVal)
+  const scrollUp = () => { setScrollVal(scrollVal + 10) }
+  const scrollDown = () => { setScrollVal(scrollVal - 10) }
 
   function handleScroll(event) {
     if (Math.abs(scrollVal) < 10) setTextColors(className.map(x => { return x + messageOneColors[0] }))
@@ -39,9 +38,9 @@ export default function LandingPage() {
     if (Math.abs(scrollVal) >= 70) setTextColors(className.map(x => { return x + messageOneColors[2] }))
     if (Math.abs(scrollVal) >= 80) setTextColors(className.map(x => { return x + messageOneColors[3] }))
     if (event.deltaY > 0) {
-      scrolUp()
+      scrollUp()
     } else {
-      scrolDown()
+      scrollDown()
     }
   }
 

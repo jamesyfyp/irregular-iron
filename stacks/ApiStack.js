@@ -13,7 +13,7 @@ export function ApiStack({ stack, app }) {
       },
     },
     routes: {
-      "POST /blogPost": "packages/functions/src/create.main",
+      "POST /blogPost": {function: "packages/functions/src/create.main", authorizer: 'none'},
       "GET /blogPosts": {
         function:"packages/functions/src/list.main",
         authorizer: "none"
@@ -22,8 +22,8 @@ export function ApiStack({ stack, app }) {
         function:"packages/functions/src/get.main",
         authorizer:"none"
       },
-      "PUT /blogPost/{title}": "packages/functions/src/update.main",
-      "DELETE /blogPost/{id}": "packages/functions/src/delete.main"
+      "PUT /blogPost/{title}": {function: "packages/functions/src/update.main", authorizer: 'none'},
+      "DELETE /blogPost/{id}": {function: "packages/functions/src/delete.main", authorizer: 'none'}
     },
   });
 
