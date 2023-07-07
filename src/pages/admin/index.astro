@@ -1,0 +1,10 @@
+---
+import AllPosts from "../../components/react/components/AllPosts.jsx";
+import SideNav from "../../layouts/SideNav.astro";
+---
+
+<SideNav title="All Posts">
+  <main>
+    <AllPosts admin={true} client:load />
+  </main>
+</SideNav>
