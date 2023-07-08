@@ -52,16 +52,16 @@ export default function LandingPage() {
     };
   }, [scrollVal])
 
-  let buttonClassName = "p-2 m-auto w-full bg-violet-900/50 text-white  text-sm sm:text-md md:text-lg lg:w-1/2 border-2 rounded-xl shadow-md hover:shadow-sm hover:outline hover:outline-2 hover:outline-inset-2 hover:underline decoration-2  underline-offset-[6px] "
-  scrollVal < 20 ? buttonClassName += "cursor-auto" : buttonClassName += "hover:cursor-pointer"
+  let buttonClassName = "p-2 m-auto w-full lg:w-1/2 bg-violet-900/50 text-white  text-sm sm:text-md md:text-lg  border-2 rounded-xl shadow-md hover:shadow-sm hover:outline hover:outline-2 hover:outline-inset-2 hover:underline decoration-2  underline-offset-[6px] "
+  scrollVal < 20 ? buttonClassName += "cursor-default" : buttonClassName += "hover:cursor-pointer"
 
   const buttonValues = [{
     name: "Linked In", onClick: () => {
       window.open('https://www.linkedin.com/in/james-phillips-923878223/', '_blank').focus();
     }, className: buttonClassName
   },
-  { name: "Blog", onClick: () => { window.location.href = '/blog' }, className: buttonClassName },
-  { name: "Portfolio", onClick: () => { window.location.href = '/portfolio' }, className: buttonClassName }]
+  { name: "Blog", href: '/blog', onClick: () => { window.location.href = '/blog' }, className: buttonClassName },
+  { name: "Portfolio", href: '/portfolio', onClick: () => { window.location.href = '/portfolio' }, className: buttonClassName }]
 
   return (
     <div className='relative w-full h-full overflow-hidden'>
@@ -116,7 +116,7 @@ export default function LandingPage() {
               <motion.div className='pt-[50vh] gap-4 grid grid-row-3  w-1/2 sm:w-1/3 text-center m-auto'>
                 {buttonValues.map((button, i) => {
                   return (
-                    <Button name={button.name} className={button.className} onClick={button.onClick} key={i} />
+                    <Button name={button.name} href={button.href} className={button.className} onClick={button.onClick} key={i} />
                   )
                 })}
               </motion.div>
