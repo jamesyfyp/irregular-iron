@@ -1,6 +1,7 @@
 ---
 import SideNav from "../../../layouts/SideNav.astro";
 import TextEditor from "../../../components/react/components/TextEditor.jsx"
+import { JsonFileLogDriver } from "aws-cdk-lib/aws-ecs";
 
 
 const { slug } = Astro.params;
@@ -8,6 +9,9 @@ const req = await fetch(
   `https://di10dsxzc6.execute-api.us-east-1.amazonaws.com/blogPost/${slug}`
 );
 const post = await req.json();
+console.log(post.content)
+
+console.log(JSON.stringify(post.content))
 
 let setUpSlug = !slug ? "index" : slug;
 ---

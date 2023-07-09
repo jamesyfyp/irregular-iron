@@ -9,7 +9,7 @@ export const main = handler(async (event) => {
     TableName: Table.BlogPost.tableName,
     Item: {
       postTitle: data.title, 
-      userId: event.requestContext.authorizer.iam.cognitoIdentity.identityId,
+      userId: 'james',
       content: data.content, 
       createdAt: Date.now(), 
     },
