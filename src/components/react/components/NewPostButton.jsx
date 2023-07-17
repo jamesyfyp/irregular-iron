@@ -4,8 +4,6 @@ export default function NewPostButton() {
     const [open, setOpen] = useState(false)
     const [loading, setLoading] = useState(false)
     const [title, setTitle] = useState('')
-    console.log()
-
     useEffect(() => {
         if (!loading) return
         async function req() {
@@ -16,7 +14,6 @@ export default function NewPostButton() {
             })
                 .then(response => response.json())
                 .then(data => {
-                    console.log('Saved:', data);
                     window.location.pathname = `/admin/editPost/${title}`
                 })
                 .catch(error => {

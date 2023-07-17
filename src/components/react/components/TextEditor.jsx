@@ -2,9 +2,9 @@ import { useRef, useState, useEffect } from "react"
 import Editor from '@monaco-editor/react'
 import { isEqual } from 'lodash'
 
-export default function TextEditor({ title, content }) {
+export default function TextEditor({ title, content, setContent }) {
     const [editorVal, setEditorVal] = useState(JSON.parse(content))
-    const [delta, setDelta] = useState(true)
+    const [disabled, setDisabled] = useState(true)
     const [loading, setLoading] = useState(false);
 
     const saveOnClick = () => {
@@ -15,13 +15,21 @@ export default function TextEditor({ title, content }) {
 
     const handleChange = (e) => {
         setEditorVal(e)
-        isEqual(content, e) ? setDelta(true) : setDelta(false)
+        setContent(e)
+        isEqual(content, e) ? setDisabled(true) : setDisabled(false)
     }
 
     function handleEditorDidMount(editor, monaco) {
         editorRef.current = editor;
 
     }
+
+    function handleValidate(markers) {
+        if (markers.length > 0) {
+            setDisabled(true)
+        }
+    }
+
     useEffect(() => {
         if (!loading) return
         async function savePostChanges() {
@@ -40,7 +48,7 @@ export default function TextEditor({ title, content }) {
     const buttonDisabledStyle = "h-auto bg-gray-800/75  m-2 ml-[4px] p-2 rounded-xl border-l-2 border-b-2 border-white/10 text-white/10"
 
     return (
-        <div>
+        <div className>
             <div>
                 <Editor
                     height="80vh"
@@ -49,10 +57,11 @@ export default function TextEditor({ title, content }) {
                     defaultValue={editorVal}
                     onMount={handleEditorDidMount}
                     onChange={handleChange}
+                    onValidate={handleValidate}
                 />
             </div>
             {
-                delta ? <button disabled={true} className={buttonDisabledStyle} >save </button> :
+                disabled ? <button disabled={true} className={buttonDisabledStyle} >save </button> :
                     loading ? <button className={buttonLoadStyle} > loading...</button> : <button onClick={saveOnClick} className={buttonStyle} > save </button>
             }
 

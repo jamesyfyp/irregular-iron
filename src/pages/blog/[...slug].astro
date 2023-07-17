@@ -22,11 +22,10 @@ const req = await fetch(
   `https://di10dsxzc6.execute-api.us-east-1.amazonaws.com/blogPost/${slug}`
 );
 const post = await req.json();
-console.log(post);
 
 let setUpSlug = !slug ? "index" : slug;
 ---
 
 <SideNav>
-  <h1>{post.postTitle}</h1>
+  <h1>{post.postTitle.replace(/_/g, ' ')}</h1>
 </SideNav>
