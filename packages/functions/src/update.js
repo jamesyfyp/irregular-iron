@@ -7,7 +7,7 @@ export const main = handler(async (event) => {
   const params = {
     TableName: Table.BlogPost.tableName,
     Key: {
-      userId: "james", 
+      userId: 'james', 
       postTitle: event.pathParameters.title, 
     },
     

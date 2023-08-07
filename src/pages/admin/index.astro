@@ -1,0 +1,15 @@
+---
+import AllPosts from "../../components/react/components/AllPosts/AllPosts.jsx";
+import SideNav from "../../layouts/SideNav.astro";
+import NewPostButton from "../../components/react/components/NewPostButton.jsx";
+
+---
+
+<SideNav title="All Posts">
+  <div class='relative'>
+    <NewPostButton client:load /> 
+    <AllPosts admin={true} client:load />
+  </div>
+</SideNav>
+
+

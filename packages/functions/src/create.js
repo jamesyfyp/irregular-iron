@@ -8,11 +8,10 @@ export const main = handler(async (event) => {
   const params = {
     TableName: Table.BlogPost.tableName,
     Item: {
-      // The attributes of the item to be created
-      postTitle: data.title, // The id of the author
-      userId: 'james', // A unique uuid
-      content: data.content, // Parsed from request body
-      createdAt: Date.now(), // Current Unix timestamp
+      postTitle: data.title, 
+      userId: 'james',
+      content: data.content, 
+      createdAt: Date.now(), 
     },
   };
 

@@ -1,6 +1,7 @@
-export default function Button(props) {
-    const { name, className, onClick } = props;
+export default function Button({ name, className, onClick, href }) {
     return (
-        <button type='button' onClick={onClick} className={className}>{name}</button>
+        <a rel='prefetch' className={className} href={href} >
+            {name}
+        </a>
     )
 }

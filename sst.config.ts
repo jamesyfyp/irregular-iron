@@ -1,9 +1,8 @@
 import type { SSTConfig } from "sst";
 import { StorageStack } from "./stacks/StorageStack";
-import { AstroSite } from "sst/constructs";
 import { ApiStack } from "./stacks/ApiStack";
-
-
+import { AuthStack } from "./stacks/AuthStack";
+import { FrontEndStack } from "./stacks/FrontEndStack";
 
 export default {
   config(_input) {
@@ -13,11 +12,10 @@ export default {
     };
   },
   stacks(app) {
-    app.stack(StorageStack).stack(ApiStack).stack(function Site({ stack }) {
-      const site = new AstroSite(stack, "site", );
-      stack.addOutputs({
-        url: site.url,
-      });
-    });
+    app
+    .stack(StorageStack)
+    .stack(ApiStack)
+    .stack(AuthStack)
+    .stack(FrontEndStack);
   },
 } satisfies SSTConfig;
