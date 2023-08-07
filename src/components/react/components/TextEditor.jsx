@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from "react"
 import Editor from '@monaco-editor/react'
 import { isEqual } from 'lodash'
 
-export default function TextEditor({ title, content, setContent }) {
+export default function TextEditor({ post, content, setContent }) {
     const [editorVal, setEditorVal] = useState(JSON.parse(content))
     const [disabled, setDisabled] = useState(true)
     const [loading, setLoading] = useState(false);
@@ -34,7 +34,7 @@ export default function TextEditor({ title, content, setContent }) {
         if (!loading) return
         async function savePostChanges() {
             const body = JSON.stringify({ content: editorVal })
-            let res = await fetch(`${import.meta.env.PUBLIC_ASTRO_APP_API_URL}/blogPost/${title}`, {
+            let res = await fetch(`${import.meta.env.PUBLIC_ASTRO_APP_API_URL}/blogPost/${post.postTitle}`, {
                 method: 'PUT',
                 body
             })
